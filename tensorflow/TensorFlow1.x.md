@@ -388,7 +388,7 @@ $$
   plt.show()
   ````
 
-  ![1](img\1.png)
+  <img src="img\1.png" alt="1" style="zoom:80%;" />
 
 * 训练过程可视化
 
@@ -407,7 +407,7 @@ $$
 
   
 
-![img\2.png](img\2.png)
+<img src="img\2.png" alt="img\2.png" style="zoom:80%;" />
 
 * 完整代码
 
@@ -533,7 +533,7 @@ $$
 
   常用激活函数
 
-  <img src="D:\文档\img\4.png" alt="4" style="zoom:80%;" />
+  <img src="img\4.png" alt="4" style="zoom:80%;" />
 
 * 带隐藏层网络（深层神经网络）解决异或问题
 
@@ -578,7 +578,7 @@ $$
 
   softmax在分类模型的最后一层，用于将输出转换成概率分布
 
-  <img src="D:\文档\img\5.png" alt="5" style="zoom:80%;" />
+  <img src="img\5.png" alt="5" style="zoom:80%;" />
 
   假设输出有N个节点，原始输出为y1，y2, y3.....yn，则经过softmax回归后输出为：
   $$
@@ -678,7 +678,7 @@ $$
 
   可以直观地想象一个包含 n 个变量和 n 个等式的方程组， 当方程不冲突时，这个方程组是可以通过数学的方法来求解的。
 
-  <img src="D:\文档\img\6.png" alt="6" style="zoom:80%;" />
+  <img src="img\6.png" alt="6" style="zoom:80%;" />
 
   解决过拟合的基本思想是限制网络的参数，使得他不能任意拟合训练数据中的随机噪声。限制网络参数的方法是在原损失函数中再加一个刻画网络复杂度的项,R(W),W表示网络参数
   $$
@@ -784,7 +784,7 @@ $$
 
   MNIST是一个手写数字0~9的数据集，包含6W张图片训练集，1W张图片测试集，图片均为28x28的灰度图片。
 
-  ![7](D:img\7.png)
+  <img src="D:img\7.png" alt="7" style="zoom:80%;" />
 
   
 
@@ -1163,7 +1163,7 @@ def get_all_layernames(pb_file_path):
 
   卷积神经网络：相邻两 层之间只有部分节点相连
 
-  ![8](img\8.png)
+  <img src="img\8.png" alt="8" style="zoom:80%;" />
 
   
 
@@ -1173,7 +1173,7 @@ def get_all_layernames(pb_file_path):
 
 * 卷积神经网络常用结构
 
-  ![9](img\9.png)
+  <img src="img\9.png" alt="9" style="zoom:80%;" />
 
 
 
@@ -1238,7 +1238,7 @@ pool = tf.nn.max_pool(y_out, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding="
 
 * LeNet-5 模型
 
-  ![10](img\10.png)
+  <img src="img\10.png" alt="10" style="zoom:80%;" />
 
 
 
@@ -1262,7 +1262,7 @@ pool = tf.nn.max_pool(y_out, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding="
 
   在卷积层中使用多个不同尺寸的过滤器(卷积核)，与输入节点矩阵进行卷积运算，当每种卷积运算的填充方式为全零填充，且步长相同时，不同尺寸的过滤器与输入节点矩阵卷积运算后具有相同的长宽，最后将多个过滤器运算得到矩阵堆叠到一起组成最终的输出矩阵。
 
-  ![11](img\11.png)
+  <img src="img\11.png" alt="11" style="zoom:80%;" />
 
   Inception架构的主要思想是找出如何用密集成分来近似最优的局部稀疏结。
 
@@ -1998,13 +1998,13 @@ pool = tf.nn.max_pool(y_out, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding="
 
 * 串行训练流程
 
-  ![15](img\15.png)
+  <img src="img\15.png" alt="15" style="zoom:80%;" />
 
 * 异步并行训练
 
   多个设备在每轮获取当前参数（网络结构参数）无法保证同时获取，即不同设备获取到的参数可能不一致。导致无法到达全局最优解。
 
-  ![16](img\16.png)
+  <img src="img\16.png" alt="16" style="zoom:80%;" />
 
   
 
@@ -2012,7 +2012,7 @@ pool = tf.nn.max_pool(y_out, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding="
 
   解决异步并行训练模式中获取网络参数不一致情况，红色框中的步骤会**等待**所有设备计算完成后再将参数整合得到最终参数。
 
-  ![17](img\17.png)
+  <img src="img\17.png" alt="17" style="zoom:80%;" />
 
 > 理论上异步模式存在缺陷，但因为训练深度学习模型时使用的随机梯度下降本身就是梯度下降的一个近似解法，而且即使是梯度下降也无法保证达到全局最优值， 所以在实际应用中，在相同时间内，使用异步模式训练的模型不一定比同步模式差。所以 这两种训练模式在实践中都有非常广泛的应用。
 
