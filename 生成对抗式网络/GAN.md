@@ -661,7 +661,7 @@ if __name__ == '__main__':
 
 
 
-<img src="E:\资料\note\生成对抗式网络\img\3.png" alt="3" style="zoom:80%;" />
+<img src="img\3.png" alt="3" style="zoom:80%;" />
 
 ### 原始GAN网络存在的问题
 
@@ -1097,7 +1097,7 @@ if __name__ == '__main__':
 
 ```
 
-<img src="E:\资料\note\生成对抗式网络\img\4.png" alt="4" style="zoom:150%;" />
+<img src="img\4.png" alt="4" style="zoom:150%;" />
 
 
 
